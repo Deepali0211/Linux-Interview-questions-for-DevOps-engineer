@@ -86,7 +86,12 @@ simple way
 
 		num=100
 
-		echo -e "num: $num" 
+
+echo -e "num: $num" 
+
+
+21)How to check if a certain port is open and unused?
+sudo netstat -anp | grep ':80 '
 		
 21) How do you set crontab? 		
 
