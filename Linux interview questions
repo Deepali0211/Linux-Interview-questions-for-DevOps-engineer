@@ -1,0 +1,94 @@
+Shell script interview quetions.
+
+1) List some of the commonly used shell commands ?
+ --- ls, cd, mv, vim, grep, mkdir, cp, find, top, free - This are the commands that we use.
+ 
+2) Write a simple shell script to list all processes 
+ --- ps -ef
+ only process id ----> ps -ef | awk -F" " '{print$2}'
+ 
+3) Write a script to print only errors from a remote log
+ --- curl google.com | grep ERROR
+ 
+4) Write a shell script to print numbers divided by 3 & 5 and not 15? (even no. odd no. prime no.)
+ --- Divisible by 3, 6, 9, 12, 15
+     Divisible by 5, 10, 15
+	 
+	 ==>Sript  
+	 for i in {1..100}; do
+	  if(['exp $i %3' == 0] || ['exp $i % 5' == 0]) && 'exp $i %15' != 0] 
+    then  echo $i
+	fi;
+	done
+
+
+5) Write a script to print number of "S" in Mississippi
+ --- 
+simple way 
+  x="Mississippi"
+   grep -o "s" >>> $x | wc -l
+      
+6) How will you debug the shell script?
+ --- set -x
+ 
+7) What is crontab in Linux? Can you provide an example of usage?
+ --- CRONTAB - nothing but alarm
+      Node health
+	  
+8) How to open a read-only file?
+ --- Vim -r test.sh
+ 
+9) What is a difference between soft and hard link?
+ --- Hard Link => Hard link will create a copy of file if the actual file will get delete from the system then we can get tht file by hard link 
+     ( whereas a hard link is a mirror copy of the original file)( command - ln)
+ --- Soft Link => Actual link of original file (ln -s)
+
+10) What is a difference between break and continue statements ?
+ --- BREAK =>  Breaking the execution
+     CONTINUE => Continue the execution(skip) --> this is continue the next
+ 
+11) What are some disadvantages of Shell scripting?
+ ---  shell scripts may be slower than programs written in compiled languages and less suited for complex computational tasks.
+
+12) What a different types of loops and when to use?
+ ---  for loop, while loop, and until loop. These loops will execute commands iteratively until a condition 
+     satisfies and comes out of the loop when the condition is not satisfied.
+	 
+	 
+13) Is bash dynamic or statically typed and why?
+ --- Shell script is Dynamic
+
+14) Explain about a network troubleshooting utility?
+ --- traceroute google.com
+ 
+15) How will you sort list on names in a file ?
+ --- sort command
+
+16) How will you manage logs of a system that generate huge log files everyday?
+ --- Logrotate (zip, gzip)
+ 
+17) what is sticky bit in linux?
+ --- The sticky bit is a permission bit that protects the files within a directory
+ 
+18) how do we verify if out shell script is executed successfully?
+ --- 
+ 
+19) what is the flag to check if file is empty or not in shell scripting? 
+ --- #!/bin/bash
+
+		file_path="/home/nadiba/color.txt"
+		if [ ! -s "$file_path" ]; then
+		echo "The file 'color.txt' is empty."
+		fi
+20) command substitution in linux with example?
+ --- allows us to execute a command and substitute it with its standard output. 
+     Ex :- #!/bin/sh
+
+		num=100
+
+		echo -e "num: $num" 
+		
+21) How do you set crontab? 		
+
+
+22) how will your .sh script configured in CRONTAB will run when system is restarted?
