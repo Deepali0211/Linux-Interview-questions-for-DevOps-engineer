@@ -92,7 +92,10 @@ echo -e "num: $num"
 
 21)How to check if a certain port is open and unused?
 sudo netstat -anp | grep ':80 '
-		
+
+22)how to delete last 30 days files from the folder though shell script
+ find ./my_dir -mtime +10 -type f -delete
+
 21) How do you set crontab? 		
 
 
