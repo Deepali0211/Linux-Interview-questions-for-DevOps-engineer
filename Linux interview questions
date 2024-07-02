@@ -71,7 +71,9 @@ simple way
  --- The sticky bit is a permission bit that protects the files within a directory
  
 18) how do we verify if out shell script is executed successfully?
- --- 
+ ---  *Exit Status*: Check the exit status of the script using `$?`. A zero exit status indicates success, while a non-zero exit status indicates failure.
+ 
+               Example: `./script.sh; echo $?`
  
 19) what is the flag to check if file is empty or not in shell scripting? 
  --- #!/bin/bash
