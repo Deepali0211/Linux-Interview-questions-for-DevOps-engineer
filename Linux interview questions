@@ -99,6 +99,8 @@ sudo netstat -anp | grep ':80 '
  find ./my_dir -mtime +10 -type f -delete
 
 21) How do you set crontab? 		
-
+    
 
 22) how will your .sh script configured in CRONTAB will run when system is restarted?
+     1. Open the crontab editor: `crontab -e`
+     2. Add the following line to run the script at startup: `@reboot /path/to/your/script.sh`
